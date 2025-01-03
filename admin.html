@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Task Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="admin.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="history.html"><i class="fas fa-history"></i> Task History</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Employee Management</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Admin Dashboard</h2>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <h3>Completed Tasks</h3>
+                        <p id="completed-tasks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Tasks</h3>
+                        <p id="pending-tasks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Employees</h3>
+                        <p id="total-employees">0</p>
+                    </div>
+                </div>
+
+                <div class="task-assignment">
+                    <h3>Assign New Task</h3>
+                    <form id="task-assignment-form">
+                        <div class="form-group">
+                            <label for="task-description">Task Description</label>
+                            <input type="text" id="task-description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="due-date">Due Date</label>
+                            <input type="date" id="due-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="employee-select">Assign To</label>
+                            <select id="employee-select" required>
+                                <!-- Employee options will be populated here -->
+                            </select>
+                        </div>
+                        <button type="submit" class="assign-btn">Assign Task</button>
+                    </form>
+                </div>
+
+                <div class="employee-table">
+                    <h3>Employee Task Overview</h3>
+                    <table id="employee-table">
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Task Assigned</th>
+                                <th>Task Status</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employee-table-body">
+                            <!-- Employee data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - Task Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/progress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (same as dashboard) -->
+        <aside class="sidebar">
+            <!-- ... sidebar content ... -->
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-tasks"></i> My Tasks</a>
+                <a href="progress.html" class="active"><i class="fas fa-chart-line"></i> Progress</a>
+                <a href="history.html"><i class="fas fa-history"></i> History</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Top bar remains the same -->
+            
+            <div class="dashboard-content">
+                <div class="progress-overview">
+                    <div class="progress-card">
+                        <canvas id="taskCompletionChart"></canvas>
+                    </div>
+                    <div class="progress-card">
+                        <canvas id="weeklyProgressChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="performance-metrics">
+                    <h2>Performance Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Task Completion Rate</h3>
+                                <span class="percentage positive">+12%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <p>85% completed this month</p>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>On-time Delivery</h3>
+                                <span class="percentage positive">+8%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                            <p>92% tasks delivered on time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/progress.js"></script>
+</body>
+</html>

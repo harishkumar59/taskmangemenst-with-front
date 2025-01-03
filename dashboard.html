@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Task Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/logo.png" alt="Logo" class="logo">
+                <h2>Task Manager</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fas fa-tasks"></i> My Tasks</a>
+                <a href="/pages/progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+                <a href="/pages/history.html"><i class="fas fa-history"></i> History</a>
+                <a href="/pages/profile.html"><i class="fas fa-user"></i> Profile</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search tasks...">
+                </div>
+                <div class="user-info">
+                    <span class="notification-badge">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </span>
+                    <img src="../assets/avatar.jpg" alt="User" class="user-avatar">
+                    <span class="user-name">John Doe</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon pending">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Pending Tasks</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon completed">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Completed</h3>
+                            <p>12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon upcoming">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Upcoming</h3>
+                            <p>3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tasks-section">
+                    <div class="section-header">
+                        <h2>My Tasks</h2>
+                        <div class="task-filters">
+                            <select>
+                                <option>All Tasks</option>
+                                <option>Pending</option>
+                                <option>Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="tasks-grid">
+                        <!-- Task cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Task Details</h2>
+            <p id="task-description-modal"></p>
+            <p><strong>Due Date:</strong> <span id="due-date-modal"></span></p>
+            <p><strong>Status:</strong> <span id="status-modal"></span></p>
+            <button id="mark-completed-btn" class="status-btn">Mark as Completed</button>
+            <button id="mark-pending-btn" class="status-btn">Mark as Pending</button>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

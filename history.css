@@ -1,0 +1,32 @@
+.task-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+.task-history-table th, .task-history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.task-history-table th {
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.task-history-table th:hover {
+    background: #f3f4f6;
+}
+
+.task-history-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.task-history-table .completed {
+    color: #22c55e; /* success color */
+}
+
+.task-history-table .pending {
+    color: #f59e0b; /* warning color */
+}
